@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  .wrapper
+    if hasReader
+      img(src=QRCode alt="QR Code")
+      a(href="/no-reader") I don't have QR code reader
+    else
+      p Курс доллара: #{usdRate} RUB
+      a(href="http://apple.co/2hhL27n") QR Code Reader and Scanner (iOS)
+      a(href="http://bit.ly/1G76NQT") QR Code Reader (Android)
